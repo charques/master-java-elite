@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<f:metadata>
+		<f:viewParam name="contact" value="#{editBean.contact}" converter="#{contactConverter}" />
+		<f:event listener="#{editBean.preRenderView()}" type="preRenderView"/>
+	</f:metadata>
+	
+	<h:head>
+		<title><h:outputText value="#{msg['app.contacto']}" /></title>
+	</h:head>
+	
+	<h:body>
+		
+		<h:messages style="color:red" />
+		
+		<h:form>
+			<h:panelGrid columns="2">
+				<f:facet name="header"><h:outputText value="#{msg['app.contacto']}" /></f:facet>
+		  		
+				<h:outputLabel value="#{msg['app.id']}" rendered="#{!empty editBean.contact.id}" />
+				<h:outputLabel value="#{editBean.contact.id}" rendered="#{!empty editBean.contact.id}" />
+					
+				<h:outputLabel for="nombre" value="#{msg['app.nombre']}" />
+				<h:inputText id="nombre" value="#{editBean.contact.nombre}" label="#{msg['app.nombre']}" required="true" />
+				
+				<h:outputLabel for="apellidos" value="#{msg['app.apellidos']}" />
+				<h:inputText id="apellidos" value="#{editBean.contact.apellidos}" label="#{msg['app.apellidos']}"  required="true" />
+				
+				<h:outputLabel for="fechaNac" value="#{msg['app.fechaNac']}" />
+				<h:inputText id="fechaNac" value="#{editBean.contact.fechaNac}" label="#{msg['app.fechaNac']}" required="true" >
+					<f:convertDateTime pattern="dd-MM-yyyy"/>
+				</h:inputText>
+				
+				<h:outputLabel for="email" value="#{msg['app.email']}" />
+				<h:inputText id="email" value="#{editBean.contact.email}" label="#{msg['app.email']}" required="true" >
+					<f:validator validatorId="edu.masterjava.jsf.tarea04.EmailValidator" />
+				</h:inputText>
+			
+				<h:commandButton action="#{editBean.save}" value="#{msg['app.enviar']}" />
+				<h:button outcome="index.xhtml" value="#{msg['app.cancelar']}"  />
+			</h:panelGrid>
+		</h:form>
+	
+	</h:body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<f:metadata>
+		<f:viewParam name="contact" value="#{editBean.contact}" converter="#{contactConverter}" />
+		<f:event listener="#{editBean.preRenderView()}" type="preRenderView"/>
+	</f:metadata>
+
+	<h:head>
+		<title><h:outputText value="#{msg['app.eliminar']}" /></title>
+	</h:head>
+
+	<h:body>
+		<h:form>
+	        <h:outputText value="#{msg['app.pregunta']}" />&nbsp;<h:outputText value="#{editBean.contact.nombre}" />?<br />
+			<h:commandButton action="#{editBean.delete}" value="#{msg['app.eliminarC']}" />
+			<h:button outcome="index.xhtml" value="#{msg['app.cancelar']}"  />
+		</h:form>
+	</h:body>
+</html>

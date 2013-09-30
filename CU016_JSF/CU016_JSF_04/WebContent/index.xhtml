@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<h:head>
+		<title><h:outputText value="#{msg['app.contactos']}" /></title>
+	</h:head>
+	
+	<h:body>
+		
+		<h:messages />
+		
+		<a href="contact_edit.xhtml"><h:outputText value="#{msg['app.anadir']}" /></a>
+		<br />
+		<br />
+		<h:dataTable border="1" var="contact" value="#{indexBean.contacts}">
+			<h:column>
+				<f:facet name="header"><h:outputText value="#{msg['app.id']}" /></f:facet>
+	   			#{contact.id}
+	   		</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputText value="#{msg['app.nombre']}" /></f:facet>
+	   			#{contact.nombre}
+	   		</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputText value="#{msg['app.apellidos']}" /></f:facet>
+	   			#{contact.apellidos}
+	   		</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputText value="#{msg['app.email']}" /></f:facet>
+	   			#{contact.email}
+	   		</h:column>
+	   		<h:column>
+				<f:facet name="header"><h:outputText value="#{msg['app.fechaNac']}" /></f:facet>
+				<h:outputLabel value="#{contact.fechaNac}">
+					<f:convertDateTime pattern="dd-MM-yyyy"/>
+				</h:outputLabel>	   			
+	   		</h:column>
+	   		<h:column>
+				<h:link outcome="contact_edit.xhtml" value="#{msg['app.editar']}">
+	   				<f:param name="contact" value="#{contact.id}"/>
+	   			</h:link>
+	   		</h:column>
+	   		<h:column>
+	   			<h:link outcome="contact_delete.xhtml" value="#{msg['app.eliminar']}">
+	   				<f:param name="contact" value="#{contact.id}" />
+	   			</h:link>
+	   		</h:column>	
+		</h:dataTable>
+		
+	</h:body>
+</html>

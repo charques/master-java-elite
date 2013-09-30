@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>JSF - Tarea 02 - Conversiones</title>
+</h:head>
+<h:body>
+	<h3>JSF - Tarea 02 - Conversiones</h3>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:outputText value="#{msg['app.numCuenta']}" />
+			<h:inputText id="numCuenta" value="#{conversionesBean.numCuenta}"
+				size="20" required="true" label="#{msg['app.numCuenta']}">
+				<f:converter
+					converterId="edu.masterjava.jsf.tarea02.NumCuentaConverter" />
+			</h:inputText>
+			<h:message for="numCuenta" style="color:red" />
+
+			<h:outputText value="#{msg['app.valor']}" />
+			<h:inputText id="valor" value="#{conversionesBean.valor}" size="20"
+				required="true" label="#{msg['app.valor']}">
+				<f:convertNumber minFractionDigits="2" />
+			</h:inputText>
+
+			<h:message for="valor" style="color:red" />
+		</h:panelGrid>
+
+		<h:commandButton value="#{msg['app.enviar']}" action="result"></h:commandButton>
+	</h:form>
+</h:body>
+</html>

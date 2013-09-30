@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>JSF - Tarea 02 - Conversiones</title>
+</h:head>
+<h:body bgcolor="white">
+	<h3>JSF - Tarea 02 - Conversiones</h3>
+
+	<h:panelGrid columns="2">
+		<h:outputText value="#{msg['app.numCuenta']}" />
+		<h:outputText value="#{conversionesBean.numCuenta}" />
+		
+		<h:outputText value="#{msg['app.minFractionDigits']}" />
+		<h:outputText value="#{conversionesBean.valor}">
+			<f:convertNumber minFractionDigits="2" />
+		</h:outputText>
+		
+		<h:outputText value="#{msg['app.pattern']}" />
+		<h:outputText value="#{conversionesBean.valor}">
+			<f:convertNumber pattern="#0.000" />
+		</h:outputText>
+		
+		<h:outputText value="#{msg['app.currencySymbol']}" />
+		<h:outputText value="#{conversionesBean.valor}">
+			<f:convertNumber currencySymbol="€" type="currency" />
+		</h:outputText>
+		
+		<h:outputText value="#{msg['app.percent']}" />
+		<h:outputText value="#{conversionesBean.valor}">
+			<f:convertNumber type="percent" />
+		</h:outputText>
+	</h:panelGrid>
+
+</h:body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>JSF - Tarea 01 - Etiquetas</title>
+</h:head>
+<h:body bgcolor="white">
+	<h3>JSF - Tarea 01 - Etiquetas</h3>
+	<h:panelGrid columns="2">
+		<h:outputText value="#{msg['app.nombre']}" />
+		<h:outputText value="#{etiquetas.nombre}" />
+
+		<h:outputText value="#{msg['app.password']}" />
+		<h:outputText value="#{etiquetas.password}" />
+
+		<h:outputText value="#{msg['app.texto']}" />
+		<h:outputText value="#{etiquetas.texto}" />
+
+		<h:outputText value="#{msg['app.actualizar']}" />
+		<h:outputText value="#{etiquetas.actualizar}" />
+
+		<h:outputText value="#{msg['app.listaValores']}" />
+		<h:outputText value="#{etiquetas.listaValoresInString}" />
+
+		<h:outputText value="#{msg['app.listaOpciones']}" />
+		<h:outputText value="#{etiquetas.listaOpcionesInString}" />
+
+		<h:outputText value="#{msg['app.radios']}" />
+		<h:outputText value="#{etiquetas.radioOpcion}" />
+		
+		<h:outputText value="#{msg['app.select']}" />
+		<h:outputText value="#{etiquetas.selectOpcion}" />
+
+	</h:panelGrid>
+</h:body>
+</html>

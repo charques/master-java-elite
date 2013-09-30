@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>JSF - Tarea 01 - Etiquetas</title>
+</h:head>
+<h:body>
+	<h3>JSF - Tarea 01 - Etiquetas</h3>
+
+	<br />
+	<br />
+
+	<h:outputLink value="#{msg['app.url']}">
+		<f:verbatim>Google</f:verbatim>
+	</h:outputLink>
+
+	<br />
+	<br />
+
+	<h:graphicImage id="image" alt="jsf-sun" url="star.jpeg">
+	</h:graphicImage>
+
+	<br />
+	<br />
+
+	<h:form>
+		<h:inputHidden id="hidden" value="#{etiquetas.hidden}" />
+
+		<h:panelGrid columns="2">
+			<h:outputText value="#{msg['app.nombre']}" />
+			<h:inputText value="#{etiquetas.nombre}"></h:inputText>
+
+			<h:outputText value="#{msg['app.password']}" />
+			<h:inputSecret redisplay="false" value="#{etiquetas.password}" />
+
+			<h:outputText value="#{msg['app.texto']}" />
+			<h:inputTextarea id="textArea" rows="4" cols="50"
+				value="#{etiquetas.texto}" />
+
+			<h:selectBooleanCheckbox title="actualizar"
+				value="#{etiquetas.actualizar}">
+			</h:selectBooleanCheckbox>
+			<h:outputText value="#{msg['app.actualizar']}" />
+
+			<h:outputText value="#{msg['app.listaValores']}" />
+			<h:selectManyCheckbox value="#{etiquetas.listaValores}">
+				<f:selectItems value="#{etiquetas.listaValoresValue}" />
+			</h:selectManyCheckbox>
+
+			<h:outputText value="#{msg['app.listaOpciones']}" />
+			<h:selectManyListbox value="#{etiquetas.listaOpciones}">
+				<f:selectItems value="#{etiquetas.listaOpcionesValue}" />
+			</h:selectManyListbox>
+
+			<h:outputText value="#{msg['app.radios']}" />
+			<h:selectOneRadio value="#{etiquetas.radioOpcion}">
+				<f:selectItems value="#{etiquetas.listaRadiosValue}" />
+			</h:selectOneRadio>
+			
+			<h:outputText value="#{msg['app.select']}" />
+			<h:selectOneMenu value="#{etiquetas.selectOpcion}">
+				<f:selectItems value="#{etiquetas.listaSelectValue}" />
+			</h:selectOneMenu>
+
+		</h:panelGrid>
+
+		<h:commandButton value="Enviar" action="etiquetas"></h:commandButton>
+	</h:form>
+
+
+
+</h:body>
+</html>
