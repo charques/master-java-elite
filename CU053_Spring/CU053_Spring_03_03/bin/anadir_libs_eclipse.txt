@@ -1,0 +1,6 @@
+A–adir libs a artefacto en Eclipse:
+--------------------------------------
+Project Properties -> Deployment Assembly
+Add -> Java Build Path Entries
+You should now see the list of libraries on your build path that you can specify for inclusion into your finished WAR.
+Select the ones you want and hit Finish.

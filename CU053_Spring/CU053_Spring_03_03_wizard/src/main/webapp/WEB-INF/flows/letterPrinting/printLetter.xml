@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/webflow
+ 
+http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+ 
+    <view-state id="enterPersonalDetails">        
+        <transition on="next" to="enterCustomMessage"/>
+    </view-state>
+ 
+    <view-state id="enterCustomMessage">
+        <transition on="next" to="enterShippingAddress"/>
+        <transition on="prev" to="enterPersonalDetails"/>
+        <transition on="startOver" to="enterPersonalDetails"/>
+    </view-state>
+     
+    <view-state id="enterShippingAddress">
+        <transition on="next" to="confirm"/>
+        <transition on="prev" to="enterCustomMessage"/>
+        <transition on="startOver" to="enterPersonalDetails"/>
+    </view-state>
+             
+    <end-state id="confirm" view="confirmPage.jsp" />
+</flow>
