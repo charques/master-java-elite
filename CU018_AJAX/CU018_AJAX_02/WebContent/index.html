@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AJAX - Cargar página</title>
+<script>
+	var xhr_object;
+
+	// Realiza la consulta de cargade una página.
+	function cargarPagina(page) {
+		// Construcción del objeto XMLHttpRequest según el tipo de navegador  
+		if(window.XMLHttpRequest)   
+			xhr_object = new XMLHttpRequest();   
+		else if(window.ActiveXObject)  
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");  
+		else {   
+			// XMLHttpRequest no es soportado por el navegador   
+			alert("Su navegador no soporta los objetos XMLHTTPRequest...");   
+			return;   
+		} 
+
+		// Realiza la consulta
+		xhr_object.open("POST", "cargarPaginaServlet", true);
+		xhr_object.onreadystatechange = loadContentHandler;
+		xhr_object.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+		var message = "page=" + page;
+		xhr_object.send(message);
+	}
+	
+	// Procesa la respuesta.
+	function loadContentHandler() {
+		if(xhr_object.readyState == 4) {
+			document.getElementById("content").innerHTML = xhr_object.responseText;
+		}
+	}
+	
+
+</script>
+</head>
+<body>
+
+	<h4>AJAX - Cargar página</h4>
+
+	<a href="#" onclick="cargarPagina('about'); return false;">Sobre nosotros</a>
+	<a href="#" onclick="cargarPagina('contact'); return false;">Contacto</a>
+
+	<hr/>
+	<div id="content"></div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AJAX - Obtener datos usuario</title>
+<script>
+	var xhr_object;
+
+	// Realiza la consulta de obtención de datos de usuario
+	function obtenerDatosUsuario() {
+		// Construcción del objeto XMLHttpRequest según el tipo de navegador  
+		if(window.XMLHttpRequest)   
+			xhr_object = new XMLHttpRequest();   
+		else if(window.ActiveXObject)  
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");  
+		else {   
+			// XMLHttpRequest no es soportado por el navegador   
+			alert("Su navegador no soporta los objetos XMLHTTPRequest...");   
+			return;   
+		} 
+
+		// Realiza la consulta
+		xhr_object.open("POST", document.forms[0].action, true);
+		xhr_object.onreadystatechange = obtenerDatosUsuarioHandler;
+		xhr_object.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+		var datos = createInputData();
+		xhr_object.send(datos);
+	}
+
+	// Crea los datos de entrada de la petición.
+	function createInputData() {
+		var controles = document.forms[0].elements;
+		var datos = new Array();
+		var cad = "";
+
+		for(var i=0; i<controles.length; i++) {
+			cad = encodeURIComponent(controles[i].name)+"=";
+			cad += encodeURIComponent(controles[i].value);
+			datos.push(cad);
+		}
+
+		cad = datos.join("&");
+		return cad;
+	}
+
+	// Procesa la respuesta.
+	function obtenerDatosUsuarioHandler() {
+		if(xhr_object.readyState == 4) {
+			var xml = xhr_object.responseXML;
+			
+			var provinciaList=xml.getElementsByTagName("provincia");
+			var ciudadList=xml.getElementsByTagName("ciudad");
+			var direccionList=xml.getElementsByTagName("direccion");
+
+			var provincia = provinciaList[0].firstChild.nodeValue;
+			var ciudad = ciudadList[0].firstChild.nodeValue;
+			var direccion = direccionList[0].firstChild.nodeValue;
+			
+			document.getElementById("result0").innerHTML = provincia;
+			document.getElementById("result1").innerHTML = ciudad;
+			document.getElementById("result2").innerHTML = direccion;
+		}
+	}
+	
+
+</script>
+</head>
+<body>
+
+	<h4>AJAX - Obtener datos usuario</h4>
+
+	<form action="obtenerDatosUsuarioServlet">
+		<table>
+			<tr>
+				<td>Usuario:</td>
+				<td>
+					<select name="username">
+						<option value=""></option>
+						<option value="0">Carlos</option>
+						<option value="1">Martín</option>
+						<option value="2">Juan</option>
+					</select>
+				</td>
+				<td>
+					<input type="button" name="btnObtener" 
+						onclick="obtenerDatosUsuario();" value="Obtener datos">
+				</td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<div id="result0"></div>
+	<div id="result1"></div>
+	<div id="result2"></div>
+</body>
+</html>

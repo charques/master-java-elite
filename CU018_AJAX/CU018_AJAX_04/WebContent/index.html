@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AJAX - Formulario</title>
+<script>
+	var xhr_object;
+
+	// Realiza la consulta de obtención de datos de usuario
+	function enviarForm() {
+		// Construcción del objeto XMLHttpRequest según el tipo de navegador  
+		if(window.XMLHttpRequest)   
+			xhr_object = new XMLHttpRequest();   
+		else if(window.ActiveXObject)  
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");  
+		else {   
+			// XMLHttpRequest no es soportado por el navegador   
+			alert("Su navegador no soporta los objetos XMLHTTPRequest...");   
+			return;   
+		} 
+
+		// Realiza la consulta
+		xhr_object.open("POST", document.forms[0].action, true);
+		xhr_object.onreadystatechange = formularioHandler;
+		xhr_object.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+		var datos = createInputData();
+		xhr_object.send(datos);
+	}
+
+	// Crea los datos de entrada de la petición.
+	function createInputData() {
+		var controles = document.forms[0].elements;
+		var datos = new Array();
+		var cad = "";
+
+		for(var i=0; i<controles.length; i++) {
+			cad = encodeURIComponent(controles[i].name)+"=";
+			cad += encodeURIComponent(controles[i].value);
+			datos.push(cad);
+		}
+
+		cad = datos.join("&");
+		return cad;
+	}
+
+	// Procesa la respuesta.
+	function formularioHandler() {
+		if(xhr_object.readyState == 4) {
+			var response = xhr_object.responseText;
+			
+			document.getElementById("formulario").innerHTML = response;
+		}
+	}
+	
+
+</script>
+</head>
+<body>
+
+	<h4>AJAX - Formulario</h4>
+
+	<div id="formulario">
+		<form action="formularioServlet">
+			<table>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" name="nombre"/></td>
+				</tr>
+				<tr>
+					<td>Apellidos:</td>
+					<td><input type="text" name="apellidos"/></td>
+				</tr>
+				<tr>
+					<td>Dirección:</td>
+					<td><input type="text" name="direccion"/></td>
+				</tr>
+				<tr>
+					<td>Localidad:</td>
+					<td><input type="text" name="localidad"/></td>
+				</tr>
+				<tr>
+					<td>Provincia:</td>
+					<td>
+						<select name="provincia">
+							<option value=""></option>
+							<option value="Madrid">Madrid</option>
+							<option value="Murcia">Murcia</option>
+							<option value="Salamanca">Salamanca</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Sexo:</td>
+					<td>
+						<input type="radio" name="sexo" value="0">Hombre
+						<input type="radio" name="sexo" value="1">Mujer
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" name="btnEnviar" 
+							onclick="enviarForm();" value="Enviar">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
