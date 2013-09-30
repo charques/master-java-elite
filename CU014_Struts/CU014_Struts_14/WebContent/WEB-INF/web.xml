@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ <display-name>CU014_Struts_14</display-name>
+ <!-- Action Servlet Configuration -->
+ <servlet>
+  <servlet-name>action</servlet-name>
+  <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+  <init-param>
+   <param-name>config</param-name>
+   <param-value>/WEB-INF/struts-config.xml</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+ </servlet>
+ <!-- Action Servlet Mapping -->
+ <servlet-mapping>
+  <servlet-name>action</servlet-name>
+  <url-pattern>*.do</url-pattern>
+ </servlet-mapping>
+ <jsp-config>
+  <taglib>
+   <taglib-uri>/WEB-INF/struts-bean</taglib-uri>
+   <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+  </taglib>
+  <taglib>
+   <taglib-uri>/WEB-INF/struts-logic</taglib-uri>
+   <taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+  </taglib>
+  <taglib>
+   <taglib-uri>/WEB-INF/struts-html</taglib-uri>
+   <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+  </taglib>
+ </jsp-config>
+ 
+  <welcome-file-list>
+    <welcome-file>/pages/index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

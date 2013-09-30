@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="LoginForm"
+			type="edu.masterjava.struts.tarea11.form.LoginForm" />
+		<form-bean name="CartItemForm"
+			type="edu.masterjava.struts.tarea12.form.CartItemForm" />
+		<form-bean name="ProductsForm"
+			type="edu.masterjava.struts.tarea12.form.ProductsForm" />
+	</form-beans>
+
+	<global-exceptions>
+		<exception key="error.global.mesage" type="java.sql.SQLException"
+			path="/error.jsp" />
+		<exception key="error.global.mesage" type="java.lang.NullPointerException"
+			path="/error.jsp" />
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="login" path="/login.jsp"></forward>
+		
+	</global-forwards>
+
+	<action-mappings>
+		<action input="/login.jsp" scope="request" name="LoginForm"
+			path="/login" validate="true"
+			type="edu.masterjava.struts.tarea11.action.LoginAction">
+			<forward name="products" path="/products.do" />
+		</action>
+		<action name="ProductsForm" path="/products"
+			type="edu.masterjava.struts.tarea12.action.ProductsAction">
+			<forward name="success" path="/products.jsp" />
+		</action>
+		<action name="CartItemForm" path="/cart" parameter="option"
+			type="edu.masterjava.struts.tarea12.action.CartAction">
+			<forward name="success" path="/cart.jsp" />
+		</action>
+	</action-mappings>
+
+	<controller>
+	</controller>
+
+	<message-resources parameter="i18n.ApplicationResources" />
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,
+                /WEB-INF/validation.xml" />
+	</plug-in>
+</struts-config>

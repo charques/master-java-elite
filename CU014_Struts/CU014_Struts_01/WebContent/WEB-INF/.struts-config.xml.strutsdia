@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM NAME="page0" PATH="/tarea02.jsp" SHAPE="400,264,50,55"
+  SUBTYPE="jsp" TITLE="tarea02.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/toEnglish.do"
+   SUBTYPE="confirmed" TARGET="action0" TITLE="/toEnglish.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT NAME="link1" PATH="/toSpanish.do"
+   SUBTYPE="confirmed" TARGET="action1" TITLE="/toSpanish.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#toEnglish" NAME="action0" PATH="/toEnglish"
+  SHAPE="608,264,0,0" SUBTYPE="unknown" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#toIngles" NAME="action2" PATH="/toIngles"
+  SHAPE="32,241,0,0" TITLE="ingles" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/tarea02.jsp"
+   TARGET="page0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#toSpanish" NAME="action1" PATH="/toSpanish"
+  SHAPE="608,376,0,0" SUBTYPE="unknown" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#toEspanol" NAME="action3" PATH="/toEspanol"
+  SHAPE="32,385,0,0" TITLE="espanol" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/tarea02.jsp"
+   TARGET="page0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

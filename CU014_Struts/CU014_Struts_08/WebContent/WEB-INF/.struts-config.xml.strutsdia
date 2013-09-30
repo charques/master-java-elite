@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#inputAction" NAME="action0" PATH="/inputAction"
+  SHAPE="32,17,0,0" TITLE="InputForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="show" NAME="forward1" PATH="/show.jsp"
+   TARGET="page1" TITLE="show" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="input" NAME="forward0" PATH="/input.jsp"
+   TARGET="page0" TITLE="input" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/input.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="input.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/inputAction.do"
+   SUBTYPE="confirmed" TARGET="action0" TITLE="/inputAction.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/show.jsp" SHAPE="240,146,0,0"
+  SUBTYPE="jsp" TITLE="show.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

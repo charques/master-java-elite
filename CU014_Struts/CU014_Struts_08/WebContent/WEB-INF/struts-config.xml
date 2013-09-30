@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources>
+	</data-sources>
+	<form-beans>
+		<form-bean name="InputForm" type="edu.masterjava.struts.tarea08.InputForm" />
+	</form-beans>
+	<global-forwards>
+	</global-forwards>
+	<action-mappings>
+		<action input="/input.jsp" parameter="method" scope="request"
+			name="InputForm" path="/inputAction" type="edu.masterjava.struts.tarea08.InputAction">
+			<forward name="input" path="/input.jsp" />
+			<forward name="show" path="/show.jsp" />
+		</action>
+	</action-mappings>
+	<controller>
+	</controller>
+</struts-config>

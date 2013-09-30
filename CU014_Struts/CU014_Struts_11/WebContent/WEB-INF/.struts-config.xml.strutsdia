@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#login" NAME="action0" PATH="/login"
+  SHAPE="32,17,0,0" TITLE="LoginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="home" NAME="forward0" PATH="/home.jsp"
+   TARGET="page2" TITLE="home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="/home.jsp" SHAPE="448,17,0,0"
+  SUBTYPE="jsp" TITLE="home.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="login" NAME="forward0" PATH="/login.jsp"
+  SHAPE="32,129,0,0" TARGET="page0" TITLE="login" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page0" PATH="/login.jsp" SHAPE="240,146,0,0"
+  SUBTYPE="jsp" TITLE="login.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/login.do" SUBTYPE="confirmed"
+   TARGET="action0" TITLE="/login.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/error.jsp" SHAPE="240,258,0,0"
+  SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="java.sql.SQLException" NAME="exception0"
+  PATH="/error.jsp" SHAPE="32,353,0,0" TARGET="page1"
+  TITLE="SQLException" TYPE="exception" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="java.lang.NullPointerException" NAME="exception1"
+  PATH="/error.jsp" SHAPE="32,241,0,0" TARGET="page1"
+  TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItem"/>
+</PROCESS>

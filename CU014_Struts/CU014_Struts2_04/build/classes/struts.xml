@@ -1,0 +1,13 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="*Input" method="{1}" class="edu.masterjava.struts2.tarea04.action.InputAction">
+            <result name="populate">/input.jsp</result>
+            <result name="input">/input.jsp</result>
+            <result name="success">/show.jsp</result>
+        </action>        
+    </package>
+</struts>

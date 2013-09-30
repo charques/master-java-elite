@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="SqlStatementForm"
+			type="edu.masterjava.struts.tarea15.form.SqlStatementForm" />
+		<form-bean name="TablesForm"
+			type="edu.masterjava.struts.tarea15.form.TablesForm" />
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+
+	</global-forwards>
+
+	<action-mappings>
+		<action input="/sqlstatement.jsp" scope="request" name="SqlStatementForm"
+			path="/sqlstatement" validate="true"
+			type="edu.masterjava.struts.tarea15.action.SqlStatementAction">
+			<forward name="sqlstatement" path="/sqlstatement.jsp"></forward>
+		</action>
+		<action scope="session" name="TablesForm" path="/tables" parameter="tables"
+			type="edu.masterjava.struts.tarea15.action.TablesAction">
+			<forward name="tables" path="/tables.jsp"></forward>
+		</action>
+		<action scope="session" name="TablesForm" path="/detail" parameter="detail"
+			type="edu.masterjava.struts.tarea15.action.TablesAction">
+			<forward name="tables" path="/tables.jsp"></forward>
+		</action>
+	</action-mappings>
+
+	<controller>
+	</controller>
+
+	<message-resources parameter="i18n.ApplicationResources" />
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,
+                /WEB-INF/validation.xml" />
+	</plug-in>
+</struts-config>

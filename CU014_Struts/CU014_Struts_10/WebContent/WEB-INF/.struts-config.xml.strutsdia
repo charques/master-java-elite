@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM NAME="page0" PATH="/parametros.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="parametros.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

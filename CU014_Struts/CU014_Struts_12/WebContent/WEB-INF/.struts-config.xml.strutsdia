@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#cart" NAME="action0" PATH="/cart" SHAPE="32,17,0,0"
+  TITLE="CartItemForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/cart.jsp"
+   TARGET="page0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/cart.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="ShoppingCart.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#products" NAME="action1" PATH="/products"
+  SHAPE="32,129,0,0" TITLE="ProductsForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/products.jsp"
+   TARGET="page1" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/products.jsp" SHAPE="240,146,0,0"
+  SUBTYPE="jsp" TITLE="products.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="products" NAME="forward0" PATH="/products.do"
+  SHAPE="32,241,0,0" TARGET="action1" TITLE="products" TYPE="forward" model-entity="StrutsProcessItem"/>
+</PROCESS>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+                               "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="ingles" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="language" type="java.lang.String"
+				initial="en" />
+			<form-property name="country" type="java.lang.String"
+				initial="US" />
+		</form-bean>
+
+		<form-bean name="espanol" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="language" type="java.lang.String"
+				initial="es" />
+			<form-property name="country" type="java.lang.String"
+				initial="ES" />
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+
+	<action-mappings>
+		<action path="/toIngles" name="ingles" type="org.apache.struts.actions.LocaleAction">
+			<forward name="success" path="/tarea02.jsp" />
+		</action>
+		<action path="/toEspanol" name="espanol" type="org.apache.struts.actions.LocaleAction">
+			<forward name="success" path="/tarea02.jsp" />
+		</action>
+	</action-mappings>
+	<controller />
+	<message-resources parameter="i18n/ApplicationResources" />
+</struts-config>

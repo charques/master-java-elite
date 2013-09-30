@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#registrar" NAME="action0" PATH="/registrar"
+  SHAPE="32,17,0,0" TITLE="RegistroForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="exito" NAME="forward0" PATH="/exito.jsp"
+   TARGET="page0" TITLE="exito" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1" PATH="/error.jsp"
+   TARGET="page1" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/exito.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="exito.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/error.jsp" SHAPE="240,129,0,0"
+  SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

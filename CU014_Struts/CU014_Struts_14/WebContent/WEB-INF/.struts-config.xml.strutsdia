@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM NAME="page2" PATH="/pages/itemForm.jsp"
+  SHAPE="448,17,0,0" SUBTYPE="jsp" TITLE="itemForm.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/catalog.do"
+   SUBTYPE="confirmed" TARGET="action2" TITLE="/catalog.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/pages/catalog.jsp"
+  SHAPE="240,241,0,0" SUBTYPE="jsp" TITLE="catalog.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/catalogItem.do"
+   SUBTYPE="confirmed" TARGET="action0" TITLE="/catalogItem.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#catalog" NAME="action2" PATH="/catalog"
+  SHAPE="656,17,0,0" TITLE="catalogForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1"
+   PATH="/pages/catalog.jsp" TARGET="page0" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="catalog" NAME="forward0" PATH="/catalog.do"
+  SHAPE="464,161,0,0" TARGET="action2" TITLE="catalog" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#catalogItem" NAME="action0" PATH="/catalogItem"
+  SHAPE="448,353,0,0" TITLE="catalogItemForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/pages/itemForm.jsp" TARGET="page2" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

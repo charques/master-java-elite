@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="catalogForm" type="edu.masterjava.struts.tarea14.form.CatalogForm"/>
+        <form-bean name="catalogItemForm" type="edu.masterjava.struts.tarea14.form.CatalogItemForm"/>
+    </form-beans>
+
+	<global-forwards>
+		<forward name="catalog" path="/catalog.do" />
+	</global-forwards>
+
+    <action-mappings>
+        <action
+                path="/catalogItem"
+                name="catalogItemForm"
+                type="edu.masterjava.struts.tarea14.action.CatalogItemAction"
+                scope="request"
+                parameter="option">
+            <forward name="success" path="/pages/itemForm.jsp"/>
+        </action>
+
+        <action
+                path="/catalog"
+                name="catalogForm"
+                type="edu.masterjava.struts.tarea14.action.CatalogAction"
+                scope="request">
+			<forward name="success" path="/pages/catalog.jsp"/>
+        </action>
+
+    </action-mappings>
+
+    <message-resources parameter="i18n/ApplicationResources" null="false"/>
+
+</struts-config>

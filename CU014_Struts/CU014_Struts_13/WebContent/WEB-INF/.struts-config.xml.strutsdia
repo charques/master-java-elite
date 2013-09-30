@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="java.sql.SQLException" NAME="exception0"
+  PATH="/error.jsp" SHAPE="32,17,0,0" TARGET="page0"
+  TITLE="SQLException" TYPE="exception" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page0" PATH="/error.jsp" SHAPE="256,34,0,0"
+  SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="java.lang.NullPointerException" NAME="exception1"
+  PATH="/error.jsp" SHAPE="32,129,0,0" TARGET="page0"
+  TITLE="NullPointerException" TYPE="exception" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="login" NAME="forward0" PATH="/login.jsp"
+  SHAPE="32,241,0,0" TARGET="page1" TITLE="login" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/login.jsp" SHAPE="240,258,0,0"
+  SUBTYPE="jsp" TITLE="login.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/login.do" SUBTYPE="confirmed"
+   TARGET="action0" TITLE="/login.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#login" NAME="action0" PATH="/login"
+  SHAPE="32,353,0,0" TITLE="LoginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="products" NAME="forward0" PATH="/products.do"
+   TARGET="action2" TITLE="products" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="/home.jsp" SHAPE="240,370,0,0"
+  SUBTYPE="jsp" TITLE="home.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3" PATH="/products.jsp" SHAPE="448,481,0,0"
+  SUBTYPE="jsp" TITLE="products.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="/cart.jsp" SHAPE="240,594,0,0"
+  SUBTYPE="jsp" TITLE="cart.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/cart.do" SUBTYPE="confirmed"
+   TARGET="action1" TITLE="/cart.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#cart" NAME="action1" PATH="/cart"
+  SHAPE="448,706,0,0" TITLE="CartItemForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/cart.jsp"
+   TARGET="page4" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#products" NAME="action2" PATH="/products"
+  SHAPE="256,481,0,0" TITLE="ProductsForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/products.jsp"
+   TARGET="page3" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

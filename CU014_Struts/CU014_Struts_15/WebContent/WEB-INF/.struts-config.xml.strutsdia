@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM NAME="page0" PATH="/sqlstatement.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="sqlstatement.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/sqlstatement.do"
+   SUBTYPE="confirmed" TARGET="action0" TITLE="/sqlstatement.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#sqlstatement" NAME="action0" PATH="/sqlstatement"
+  SHAPE="448,34,0,0" TITLE="SqlStatementForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="sqlstatement" NAME="forward0"
+   PATH="/sqlstatement.jsp" TARGET="page0" TITLE="sqlstatement"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#tables" NAME="action1" PATH="/tables"
+  SHAPE="32,129,0,0" TITLE="TablesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="tables" NAME="forward0" PATH="/tables.jsp"
+   TARGET="page1" TITLE="tables" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/tables.jsp" SHAPE="240,146,0,0"
+  SUBTYPE="jsp" TITLE="tables.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/detail.do"
+   SUBTYPE="confirmed" TARGET="action3" TITLE="/detail.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#detail" NAME="action3" PATH="/detail"
+  SHAPE="32,241,0,0" TITLE="TablesForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="tables" NAME="forward0" PATH="/tables.jsp"
+   TARGET="page1" TITLE="tables" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>
