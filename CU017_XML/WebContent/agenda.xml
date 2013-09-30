@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "agenda.dtd">
+<agenda>
+	<contacto tipo="trabajo">
+		<nombre>David Pérez Martínez</nombre>
+		<direccion>C/ Mayor, 5</direccion>
+		<localidad>Madrid</localidad>
+		<cp>28080</cp>
+		<pais>España</pais>
+		<email>dpmartinez@gmail.com</email>
+		<telefono>675854333</telefono>
+		<cita>
+			<descripcion>Reunión de seguimiento</descripcion>
+			<fecha>10/03/2013</fecha>
+			<horaInicio>12:00</horaInicio>
+			<duracion>120</duracion>
+		</cita>
+		<cita>
+			<descripcion>Requisitos</descripcion>
+			<fecha>12/03/2013</fecha>
+			<horaInicio>11:00</horaInicio>
+			<duracion>60</duracion>
+		</cita>
+	</contacto>
+	<contacto tipo="amigo">
+		<nombre>Juan Salado Martín</nombre>
+		<direccion>C/ Roma, 34</direccion>
+		<localidad>Mostoles</localidad>
+		<cp>28931</cp>
+		<pais>España</pais>
+		<email>jsmartin@gmail.com</email>
+		<telefono>674363622</telefono>
+		<telefono>918827733</telefono>
+		<cita>
+			<descripcion>Fiesta cumpleaños</descripcion>
+			<fecha>11/03/2013</fecha>
+			<horaInicio>19:00</horaInicio>
+			<duracion>-1</duracion>
+		</cita>
+	</contacto>
+	<contacto tipo="amigo">
+		<nombre>Ana Regalado Ruíz</nombre>
+		<direccion>C/ Islas Filipinas, 34, 4d</direccion>
+		<localidad>Alcalá de Henares</localidad>
+		<cp>28801</cp>
+		<pais>España</pais>
+		<email>anaregalado@gmail.com</email>
+		<telefono>612121222</telefono>
+		<cita>
+			<descripcion>Cena sabado</descripcion>
+			<fecha>15/03/2013</fecha>
+			<horaInicio>21:00</horaInicio>
+			<duracion>-1</duracion>
+		</cita>
+	</contacto>
+</agenda>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT agenda (contacto*)>
+<!ELEMENT contacto (   nombre
+                         , direccion
+                         , localidad
+                         , cp
+                         , pais
+                         , email
+                         , telefono*
+                         , cita*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT cita (   descripcion
+                         , fecha
+                         , horaInicio
+                         , duracion)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT horaInicio (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+
+<!ATTLIST contacto tipo CDATA #REQUIRED>
+
+<!ENTITY AUTHOR "Carlos Hernández">
+<!ENTITY WEB    "www.coconnut.com">
+<!ENTITY EMAIL  "carloshernandezarques@gmail.com">

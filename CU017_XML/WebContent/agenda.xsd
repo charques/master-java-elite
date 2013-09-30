@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contacto" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="direccion"/>
+              <xs:element type="xs:string" name="localidad"/>
+              <xs:element type="xs:string" name="cp"/>
+              <xs:element type="xs:string" name="pais"/>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element type="xs:string" name="telefono" maxOccurs="unbounded"/>
+              <xs:element name="cita" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="descripcion"/>
+                    <xs:element type="xs:string" name="fecha"/>
+                    <xs:element type="xs:string" name="horaInicio"/>
+                    <xs:element type="xs:short" name="duracion"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="tipo" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
