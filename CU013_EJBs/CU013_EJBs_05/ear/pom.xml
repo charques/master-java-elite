@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!--
+        This pom builds the EAR artifact and includes the ejb and web modules.
+    -->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>edu.masterjava.ejb.tarea05</groupId>
+    	<artifactId>tarea05</artifactId>
+	    <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>cu013-tarea05-ear</artifactId>
+    <packaging>ear</packaging>
+
+    <name>CU013_EJBs_05 - EAR</name>
+    <description>CU013_EJBs_05 - EAR</description>
+
+    <dependencies>
+        <!-- Dependencies on the ejb and web modules so that they can be found by the ear plugin -->
+        <dependency>
+            <groupId>edu.masterjava.ejb.tarea05</groupId>
+            <artifactId>cu013-tarea05-web</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>edu.masterjava.ejb.tarea05</groupId>
+            <artifactId>cu013-tarea05-ejb</artifactId>
+            <type>ejb</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+      <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- Ear plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>${version.ear.plugin}</version>
+                <!-- configuring the ear plugin -->
+                <configuration>
+                    <!-- Tell Maven we are using Java EE 6 -->
+                    <version>6</version>
+                    <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
+                        are in easy way to package any libraries needed in the ear, and automatically 
+                        have any modules (EJB-JARs and WARs) use them -->
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                    <!-- Default context root of the web app is /jboss-as-ejb-in-ear-web. 
+                        If a custom context root is needed, uncomment the following snippet to
+                        register our War as a web module and set the contextRoot property -->
+                        <webModule>
+                            <groupId>edu.masterjava.ejb.tarea05</groupId>
+                            <artifactId>cu013-tarea05-web</artifactId>
+                            <contextRoot>/cu013-tarea05-web</contextRoot>
+                        </webModule>
+                    </modules>
+                    <fileNameMapping>no-version</fileNameMapping>
+                </configuration>
+            </plugin>
+            <!-- JBoss AS plugin to deploy ear -->
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.jboss.maven.plugin}</version>
+                <configuration>
+                    <filename>${project.artifactId}.ear</filename>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

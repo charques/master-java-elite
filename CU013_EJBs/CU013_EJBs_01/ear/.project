@@ -1,0 +1,10 @@
+<projectDescription>
+  <name>cu013-tarea01-ear</name>
+  <comment>CU013_EJBs_01 - EAR. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>cu013-tarea01-ejb</project>
+    <project>cu013-tarea01-web</project>
+  </projects>
+  <buildSpec/>
+  <natures/>
+</projectDescription>

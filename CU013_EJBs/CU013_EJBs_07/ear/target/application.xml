@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <description>CU013_EJBs_07 - EAR</description>
+  <display-name>cu013-tarea07-ear</display-name>
+  <module>
+    <web>
+      <web-uri>cu013-tarea07-web.war</web-uri>
+      <context-root>/cu013-tarea07-web</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>cu013-tarea07-ejb.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

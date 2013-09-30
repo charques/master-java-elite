@@ -1,0 +1,21 @@
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/ejb/ejb-api/3.0-alpha-1/ejb-api-3.0-alpha-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar"/>
+  <classpathentry kind="src" path="/cu013-tarea04-ejb"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.2.Final/jboss-ejb-api_3.1_spec-1.0.2.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/jboss-ejb-client/1.0.16.Final/jboss-ejb-client-1.0.16.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.1.1.GA/jboss-logging-3.1.1.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/marshalling/jboss-marshalling/1.3.16.GA/jboss-marshalling-1.3.16.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/marshalling/jboss-marshalling-river/1.3.16.GA/jboss-marshalling-river-1.3.16.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/remoting3/jboss-remoting/3.2.14.GA/jboss-remoting-3.2.14.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/sasl/jboss-sasl/1.0.3.Final/jboss-sasl-1.0.3.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.2.Final/jboss-servlet-api_3.0_spec-1.0.2.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/xnio/xnio-api/3.0.7.GA/xnio-api-3.0.7.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/xnio/xnio-nio/3.0.7.GA/xnio-nio-3.0.7.GA.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+</classpath>
