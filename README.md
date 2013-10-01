@@ -3,6 +3,7 @@ master-java-elite
 
 Este repositorio incluye todos los ejercicios prácticos realizados durante la realización del master.
 
+- [CU000_PROYECTO_EasyBakery](https://github.com/charques/master-java-elite/tree/master/CU000_PROYECTO_EasyBakery)
 - [CU001 Introducción a Oracle11g](https://github.com/charques/master-java-elite/tree/master/CU001_Introduccion_a_Oracle11g)
 - [CU002_LENGUAJE_PL/SQL®](https://github.com/charques/master-java-elite/tree/master/CU002_LENGUAJE_PL:SQL%C2%AE)
 - [CU009_JavaIniciacion](https://github.com/charques/master-java-elite/tree/master/CU009_JavaIniciacion)
