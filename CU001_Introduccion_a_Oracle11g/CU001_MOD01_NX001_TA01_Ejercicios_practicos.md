@@ -1,20 +1,20 @@
 CU001 Introducción a Oracle11g
-==============================
+------------------------------	
 
-1.	Ejemplo de Diseño de base de datos relacional. Pág. 114 a 123 del Manual1 (leer y entender) 
+**Ejemplo de Diseño de base de datos relacional. Pág. 114 a 123 del Manual1 (leer y entender) **
 
--
 
-2.	Ejercicio 4-1 . Pág. 127 a 134 del Manual1 (leer y entender).
 
--
+**Ejercicio 4-1 . Pág. 127 a 134 del Manual1 (leer y entender).**
 
-3.	Ejercicio: Diseñar el modelo de datos para almacenar la información referente a una Biblioteca, donde queremos almacenar información de: 
-•	Libros: Isbn, Autor, tema, fecha_alta,… 
-•	Socios: Dni, nombre, fecha_nac, fecha_alta, sexo, .. 
-•	Prestamos: activos e histórico 
-•	Empleados de la Biblioteca: nº empleado, nombre, alta, 
-Queremos reflejar, asimismo, otras informaciones: Ejemplares de cada libro, clasificar los temas por un código.
+
+
+**Ejercicio: Diseñar el modelo de datos para almacenar la información referente a una Biblioteca, donde queremos almacenar información de: 
+-	Libros: Isbn, Autor, tema, fecha_alta,… 
+-	Socios: Dni, nombre, fecha_nac, fecha_alta, sexo, .. 
+-	Prestamos: activos e histórico 
+-	Empleados de la Biblioteca: nº empleado, nombre, alta, 
+Queremos reflejar, asimismo, otras informaciones: Ejemplares de cada libro, clasificar los temas por un código.**
 
 TEMAS
 - idTema (pk)
