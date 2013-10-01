@@ -1,0 +1,33 @@
+$(function(){
+	// GET ID OF last row and increment it by one
+	var $index =1, $newRow;
+	$get_lastID = function(){
+		var $id = $('#recipeitems_table tr:last-child td:first-child input').attr("name");
+		var $init=$id.lastIndexOf("[");
+		var $end=$id.lastIndexOf("]");
+		$index = parseInt($id.substring($init+1, $end), 10);
+		console.log('GET index: ' + $index + ' | $id :'+$id);
+		$index = $index + 1;
+		$newRow = "<tr> \
+					<td><input type='text' name='items["+$index+"].feedstockId' maxlength='255' /></td> \
+					<td><input type='number' name='items["+$index+"].percentage' maxlength='11' /></td> \
+					<td><input type='button' value='Delete' class='del_RecipeItemRow' /></td> \
+				</tr>"
+		return $newRow;
+	}
+	
+	// ***** -- START ADDING NEW ROWS
+	$('#add_RecipeItemRow').live("click", function(){ 
+		if($index <= 12){
+			$get_lastID();
+			$('#recipeitems_table tbody').append($newRow);
+		} else {
+			alert("Reached Maximum Rows!");
+		};
+	});
+	
+	$(".del_RecipeItemRow").live("click", function(){ 
+		$(this).closest('tr').remove();
+		$index = $index-2;
+	});	
+});

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/projects/!svn/ver/1293/trunk/easybakery/src/main/webapp/WEB-INF/templates
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/projects/!svn/ver/1324/trunk/easybakery/src/main/webapp/WEB-INF/templates/main.jsp
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/projects/!svn/ver/1326/trunk/easybakery/src/main/webapp/WEB-INF/templates/menu.jsp
+END
+blank.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1262/trunk/easybakery/src/main/webapp/WEB-INF/templates/blank.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/!svn/ver/1262/trunk/easybakery/src/main/webapp/WEB-INF/templates/header.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/!svn/ver/1332/trunk/easybakery/src/main/webapp/WEB-INF/templates/footer.jsp
+END

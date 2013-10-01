@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/projects/!svn/ver/1298/trunk/easybakery/src/main/resources
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/projects/!svn/ver/1260/trunk/easybakery/src/main/resources/messages.properties
+END
+security_schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/projects/!svn/ver/1332/trunk/easybakery/src/main/resources/security_schema.sql
+END
+messages_es.properties
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/projects/!svn/ver/1331/trunk/easybakery/src/main/resources/messages_es.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/projects/!svn/ver/1310/trunk/easybakery/src/main/resources/log4j.xml
+END
+schema.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/projects/!svn/ver/1336/trunk/easybakery/src/main/resources/schema.sql
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/projects/!svn/ver/1299/trunk/easybakery/src/main/webapp/WEB-INF/spring
+END
+trace-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/projects/!svn/ver/1304/trunk/easybakery/src/main/webapp/WEB-INF/spring/trace-context.xml
+END
+services-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/projects/!svn/ver/1263/trunk/easybakery/src/main/webapp/WEB-INF/spring/services-context.xml
+END
+webmvc-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/projects/!svn/ver/1330/trunk/easybakery/src/main/webapp/WEB-INF/spring/webmvc-context.xml
+END
+security-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/projects/!svn/ver/1321/trunk/easybakery/src/main/webapp/WEB-INF/spring/security-context.xml
+END
+data-access-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/projects/!svn/ver/1299/trunk/easybakery/src/main/webapp/WEB-INF/spring/data-access-context.xml
+END

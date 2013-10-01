@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/projects/!svn/ver/1299/trunk/easybakery/src/main/java/edu/masterjava/easybakery/persistence/repo/batch
+END
+BatchRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/persistence/repo/batch/BatchRepository.java
+END
+BatchRepositoryImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/persistence/repo/batch/BatchRepositoryImpl.java
+END
+BatchIngredientRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/persistence/repo/batch/BatchIngredientRepository.java
+END
+BatchRepositoryCustom.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/persistence/repo/batch/BatchRepositoryCustom.java
+END

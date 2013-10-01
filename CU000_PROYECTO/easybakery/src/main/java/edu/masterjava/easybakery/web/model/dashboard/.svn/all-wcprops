@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/projects/!svn/ver/1322/trunk/easybakery/src/main/java/edu/masterjava/easybakery/web/model/dashboard
+END
+GraphUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/web/model/dashboard/GraphUI.java
+END
+BatchGraphUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/web/model/dashboard/BatchGraphUI.java
+END
+GraphDataSetsUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/web/model/dashboard/GraphDataSetsUI.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/projects/!svn/ver/1299/trunk/easybakery/src/main/java/edu/masterjava/easybakery/service/batch
+END
+BatchService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/service/batch/BatchService.java
+END
+BatchServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/service/batch/BatchServiceImpl.java
+END
+BatchNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/service/batch/BatchNotFoundException.java
+END

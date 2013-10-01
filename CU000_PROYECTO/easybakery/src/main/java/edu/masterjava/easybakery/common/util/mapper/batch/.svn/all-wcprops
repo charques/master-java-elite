@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/projects/!svn/ver/1299/trunk/easybakery/src/main/java/edu/masterjava/easybakery/common/util/mapper/batch
+END
+BatchIngredientMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/projects/!svn/ver/1336/trunk/easybakery/src/main/java/edu/masterjava/easybakery/common/util/mapper/batch/BatchIngredientMapper.java
+END
+BatchMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/common/util/mapper/batch/BatchMapper.java
+END
+BatchIngredientCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/projects/!svn/ver/1333/trunk/easybakery/src/main/java/edu/masterjava/easybakery/common/util/mapper/batch/BatchIngredientCollection.java
+END

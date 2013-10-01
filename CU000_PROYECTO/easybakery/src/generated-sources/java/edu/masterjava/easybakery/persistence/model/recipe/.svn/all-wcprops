@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/projects/!svn/ver/1322/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/recipe
+END
+QRecipe.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/projects/!svn/ver/1322/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/recipe/QRecipe.java
+END
+QIngredient.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/projects/!svn/ver/1331/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/recipe/QIngredient.java
+END

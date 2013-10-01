@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2
+END
+TilesUrlBasedViewResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2/TilesUrlBasedViewResolver.java
+END
+DynamicTilesView.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2/DynamicTilesView.java
+END
+DynamicTilesViewProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2/DynamicTilesViewProcessor.java
+END
+TilesAjaxUrlBasedViewResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2/TilesAjaxUrlBasedViewResolver.java
+END
+AjaxDynamicTilesView.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/projects/!svn/ver/1265/trunk/easybakery/src/main/java/org/springbyexample/web/servlet/view/tiles2/AjaxDynamicTilesView.java
+END

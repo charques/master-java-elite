@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/projects/!svn/ver/1322/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/batch
+END
+QBatch.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/projects/!svn/ver/1322/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/batch/QBatch.java
+END
+QBatchIngredient.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/projects/!svn/ver/1336/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/batch/QBatchIngredient.java
+END
+QBatchStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/projects/!svn/ver/1324/trunk/easybakery/src/generated-sources/java/edu/masterjava/easybakery/persistence/model/batch/QBatchStatistics.java
+END
