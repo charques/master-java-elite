@@ -27,9 +27,9 @@ Lo forman 2 pantallas:
 
 -	la pantalla de listado, que permite acceder a la edición u eliminar  elementos.
 -	la pantalla de creación/edición, que permite gestionar una materia prima en función de los siguientes campos: 
-* Descripción: descripción básica de la materia prima.
-* Precio: precio unitario de la materia prima en función de la unidad de medida.
-* Unidad: unidad de medida.
+	* Descripción: descripción básica de la materia prima.
+	* Precio: precio unitario de la materia prima en función de la unidad de medida.
+	* Unidad: unidad de medida.
 
 **Módulo de recetas**
 
@@ -39,9 +39,9 @@ Lo forman 2 pantallas:
 
 -	la pantalla de listado, que permite acceder a la edición u eliminar  elementos.
 -	la pantalla de creación/edición, que permite gestionar una receta en función de los siguientes campos:
-*	Descripción: descripción básica de la receta.
-*	Comentario: comentario extendido.
-*	Ingredientes: lista de ingredientes de la receta basados en materias primas. Para cada ingrediente se puede seleccionar la materia prima y el porcentaje de esta que es necesario para producir la receta.
+	*	Descripción: descripción básica de la receta.
+	*	Comentario: comentario extendido.
+	*	Ingredientes: lista de ingredientes de la receta basados en materias primas. Para cada ingrediente se puede seleccionar la materia prima y el porcentaje de esta que es necesario para producir la receta.
 
 
 **Módulo de lotes**
@@ -52,9 +52,9 @@ Lo forman 3 pantallas:
 
 -	la pantalla de listado, que permite acceder a la edición u eliminar  elementos.
 -	la pantalla de creación, que permite crear un lote en función de los siguientes campos:
-*	Receta: tipo de receta en la que se basa el lote. El resto de bloques de la pantalla se cargan vía AJAX al seleccionar la receta.
-*	Cantidad: cantidad de producto. Las cantidades de cada ingrediente se calculan en función de la cantidad total.
-*	Descripción: descripción del lote.
+	*	Receta: tipo de receta en la que se basa el lote. El resto de bloques de la pantalla se cargan vía AJAX al seleccionar la receta.
+	*	Cantidad: cantidad de producto. Las cantidades de cada ingrediente se calculan en función de la cantidad total.
+	*	Descripción: descripción del lote.
 
 **Módulo de estadísticas**
 
@@ -83,8 +83,8 @@ Tecnologías
 Modelo de datos
 ---------------
 
-El script squema.sql define el modelo de datos de negocio  de la aplicación. 
-El script security_squema.xml define el modelo de datos de seguridad de la aplicación.
+El script **squema.sql** define el modelo de datos de negocio  de la aplicación. 
+El script **security_squema.xml** define el modelo de datos de seguridad de la aplicación.
 
 Con el fin de simplificar la configuración de la aplicación y teniendo en cuenta el motivo didáctico de esta se ha utilizado una base datos HSQLDB embebida.
 
